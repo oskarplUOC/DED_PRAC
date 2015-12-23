@@ -1,0 +1,469 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# FORMAT per a fer el test:                                         #
+# nomMetode, valorArgument1, valorArgument2, valorArgumentN         #
+# Admet String's, tipus de dades primitius i dates (java.util.Date) #
+# en format dd-MM-yyyy HH:mm:ss                                     #
+# No suporta metodes homonims amb el mateix nombre de parametres    #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# EP2 test
+
+# ERROR
+users()
+ERROR: There are no users
+
+addUser(U1, joep@uoc.edu, ****)
+void
+addUser(U2, joan@uoc.edu, ****)
+void
+addUser(U3, pere@uoc.edu, ****)
+void
+addUser(U4, achillar@uoc.edu, ****)
+void
+addUser(U5, sanchez@uoc.edu, ****)
+void
+addUser(U6, degana@uoc.edu, ****)
+void
+addUser(U7, alex@uoc.edu, ****)
+void
+addUser(U8, sergio@uoc.edu, ****)
+void
+
+addUser(B3, helenap@uoc.edu, ****)
+void
+addUser(A36, marti@uoc.edu, ****)
+void
+addUser(A16, pepmarti@uoc.edu, ****)
+void
+
+users()
+A16 [pepmarti@uoc.edu] **** 
+
+A36 [marti@uoc.edu] **** 
+
+B3 [helenap@uoc.edu] **** 
+
+U1 [joep@uoc.edu] **** 
+
+U2 [joan@uoc.edu] **** 
+
+U3 [pere@uoc.edu] **** 
+
+U4 [achillar@uoc.edu] **** 
+
+U5 [sanchez@uoc.edu] **** 
+
+U6 [degana@uoc.edu] **** 
+
+U7 [alex@uoc.edu] **** 
+
+U8 [sergio@uoc.edu] **** 
+
+
+# update
+addUser(U1, josep@uoc.edu, ****)
+void
+
+users()
+A16 [pepmarti@uoc.edu] **** 
+
+A36 [marti@uoc.edu] **** 
+
+B3 [helenap@uoc.edu] **** 
+
+U1 [josep@uoc.edu] **** 
+
+U2 [joan@uoc.edu] **** 
+
+U3 [pere@uoc.edu] **** 
+
+U4 [achillar@uoc.edu] **** 
+
+U5 [sanchez@uoc.edu] **** 
+
+U6 [degana@uoc.edu] **** 
+
+U7 [alex@uoc.edu] **** 
+
+U8 [sergio@uoc.edu] **** 
+
+
+# ERROR
+channels()
+ERROR: There are no channels
+
+addChannel(CH1, Physics, description1)
+void
+
+addChannel(CH2, Chemistry, description2)
+void
+addChannel(CH3, Maths, description3)
+void
+addChannel(CH4, Arts, description4)
+void
+addChannel(CH5, Computer & Science, description5)
+void
+addChannel(CH6, Physics, description6)
+void
+
+channels()
+CH1, Physics, description1
+CH2, Chemistry, description2
+CH3, Maths, description3
+CH4, Arts, description4
+CH5, Computer & Science, description5
+CH6, Physics, description6
+
+# ERROR
+programs(CH1)
+ERROR: There are no programs
+# ERROR
+programs(CH2)
+ERROR: There are no programs
+# ERROR
+programs(CH3)
+ERROR: There are no programs
+
+addProgram(P12, The Last Magician, description2, CH1)
+void
+addProgram(P13, Newton's Third Law, description3, CH1)
+void
+addProgram(P11, Discovering the work of Isaac Newton, description1, CH1)
+void
+
+addProgram(P22, The mole, description2, CH2)
+void
+addProgram(P23, Chemistry for the Biosciences, description3, CH2)
+void
+addProgram(P21, Fundamental ideas in chemistry, description1, CH2)
+void
+
+addProgram(P32, Diego Velázquez: Las Meninas, description2, CH3)
+void
+addProgram(P33, Da Vinci: The Lost Treasure, description3, CH3)
+void
+addProgram(P31, Pablo Picasso paintings, description1, CH3)
+void
+
+#ERROR
+programs(CHX)
+ERROR: Channel not found
+
+programs(CH1)
+P11, Discovering the work of Isaac Newton, description1 views(0) rating(0.0):
+P12, The Last Magician, description2 views(0) rating(0.0):
+P13, Newton's Third Law, description3 views(0) rating(0.0):
+
+programs(CH2)
+P21, Fundamental ideas in chemistry, description1 views(0) rating(0.0):
+P22, The mole, description2 views(0) rating(0.0):
+P23, Chemistry for the Biosciences, description3 views(0) rating(0.0):
+
+programs(CH3)
+P31, Pablo Picasso paintings, description1 views(0) rating(0.0):
+P32, Diego Velázquez: Las Meninas, description2 views(0) rating(0.0):
+P33, Da Vinci: The Lost Treasure, description3 views(0) rating(0.0):
+
+#ERROR
+programs(CH4)
+ERROR: There are no programs
+
+
+#ERROR
+registerView(CHX, P11, U1, 26-10-2015 20:00:00)
+ERROR: Channel not found
+
+#ERROR
+registerView(CH1, PX, U1, 26-10-2015 20:00:00)
+ERROR: Program not found
+
+#ERROR
+registerView(CH1, P11, UX, 26-10-2015 20:00:00)
+ERROR: User not found
+
+registerView(CH1, P11, U1, 26-10-2015 20:00:00)
+void
+registerView(CH1, P12, U1, 27-10-2015 20:00:00)
+void
+registerView(CH1, P13, U1, 28-10-2015 20:00:00)
+void
+registerView(CH2, P21, U1, 29-10-2015 20:00:00)
+void
+registerView(CH2, P23, U1, 30-10-2015 20:00:00)
+void
+registerView(CH2, P22, U1, 04-11-2015 19:00:00)
+void
+
+registerView(CH1, P11, U2, 28-10-2015 20:00:00)
+void
+registerView(CH1, P12, U2, 29-10-2015 20:20:00)
+void
+registerView(CH1, P13, U2, 30-10-2015 21:00:00)
+void
+
+registerView(CH1, P13, U4, 28-10-2015 20:00:00)
+void
+registerView(CH1, P13, U5, 29-10-2015 20:20:00)
+void
+registerView(CH1, P13, U6, 30-10-2015 21:00:00)
+void
+
+registerView(CH2, P23, U4, 28-10-2015 20:00:00)
+void
+registerView(CH2, P23, U5, 29-10-2015 20:20:00)
+void
+registerView(CH2, P23, U6, 30-10-2015 21:00:00)
+void
+registerView(CH2, P23, U7, 30-10-2015 21:00:00)
+void
+registerView(CH2, P23, U8, 30-10-2015 21:00:00)
+void
+
+registerView(CH1, P11, U7, 30-10-2015 21:00:00)
+void
+registerView(CH1, P11, U8, 30-10-2015 21:00:00)
+void
+
+registerView(CH2, P21, U7, 30-10-2015 21:00:00)
+void
+
+getUserViews(U1)
+P11, Discovering the work of Isaac Newton, description1, views(4)
+P12, The Last Magician, description2, views(2)
+P13, Newton's Third Law, description3, views(5)
+P21, Fundamental ideas in chemistry, description1, views(2)
+P23, Chemistry for the Biosciences, description3, views(6)
+P22, The mole, description2, views(1)
+
+getUserViews(U2)
+P11, Discovering the work of Isaac Newton, description1, views(4)
+P12, The Last Magician, description2, views(2)
+P13, Newton's Third Law, description3, views(5)
+
+rateProgram(CH1, P13, 5)
+void
+rateProgram(CH1, P13, 5)
+void
+rateProgram(CH1, P13, 5)
+void
+rateProgram(CH1, P13, 5)
+void
+program(CH1, P13)
+P13, Newton's Third Law, description3 views(5) rating(5.0):
+
+rateProgram(CH1, P11, 5)
+void
+
+program(CH1, P11)
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(5.0):
+
+rateProgram(CH1, P11, 0)
+void
+program(CH1, P11)
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(2.5):
+
+rateProgram(CH1, P11, 1)
+void
+program(CH1, P11)
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(2.0):
+
+rateProgram(CH1, P11, 1)
+void
+program(CH1, P11)
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.75):
+
+rateProgram(CH1, P11, 2)
+void
+program(CH1, P11)
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
+
+topRating()
+P13, Newton's Third Law, description3 views(5) rating(5.0):
+
+rateProgram(CH2, P21, 4)
+void
+rateProgram(CH2, P22, 1)
+void
+rateProgram(CH2, P23, 2)
+void
+
+programs(CH1)
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
+P12, The Last Magician, description2 views(2) rating(0.0):
+P13, Newton's Third Law, description3 views(5) rating(5.0):
+
+programs(CH2)
+P21, Fundamental ideas in chemistry, description1 views(2) rating(4.0):
+P22, The mole, description2 views(1) rating(1.0):
+P23, Chemistry for the Biosciences, description3 views(6) rating(2.0):
+
+getTop10Programs()
+P23, Chemistry for the Biosciences, description3 views(6) rating(2.0):
+P13, Newton's Third Law, description3 views(5) rating(5.0):
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
+P12, The Last Magician, description2 views(2) rating(0.0):
+P21, Fundamental ideas in chemistry, description1 views(2) rating(4.0):
+P22, The mole, description2 views(1) rating(1.0):
+
+getChannelTop10Programs(CH2)
+P23, Chemistry for the Biosciences, description3 views(6) rating(2.0):
+P21, Fundamental ideas in chemistry, description1 views(2) rating(4.0):
+P22, The mole, description2 views(1) rating(1.0):
+
+#########
+## PRA ##
+#########
+
+
+# ERROR
+addMessage(XXX, P11, U1, title1, message1)
+ERROR: Channel not found
+
+# ERROR
+addMessage(CH1, XXX, U1, title1, message1)
+ERROR: Program not found
+
+# ERROR
+addMessage(CH1, P11, XX, title1, message1)
+ERROR: User not found
+
+addMessage(CH1, P11, U1, title1, message1)
+void
+
+# ERROR
+addMessage(CH1, P11, U1, title1, message2)
+ERROR: Message already exists
+
+getMessages(CH1, P11)
+U1 [title1] message1 
+
+addMessage(CH1, P11, U1, title2, message2)
+void
+addMessage(CH1, P11, U1, titleX, messageX)
+void
+addMessage(CH1, P11, U2, title3, message3)
+void
+addMessage(CH1, P11, U3, title4, message4)
+void
+addMessage(CH1, P11, U4, title5, message5)
+void
+
+getMessages(CH1, P11)
+U1 [title1] message1 
+U1 [title2] message2 
+U2 [title3] message3 
+U3 [title4] message4 
+U4 [title5] message5 
+U1 [titleX] messageX 
+
+# ERROR
+removeMessage(XX, P11, titleX)
+ERROR: Channel not found
+
+# ERROR
+removeMessage(CH1, XX, titleX)
+ERROR: Program not found
+
+# ERROR
+removeMessage(CH1, P11, titleXXXXX)
+ERROR: Message not found
+
+removeMessage(CH1, P11, titleX)
+void
+
+getMessages(CH1, P11)
+U1 [title1] message1 
+U1 [title2] message2 
+U2 [title3] message3 
+U3 [title4] message4 
+U4 [title5] message5 
+
+# ERROR
+addSubstituteProgram(XXX, P11, P11AlT1, nameALT1, descriptionALT1, 200)
+ERROR: Channel not found
+
+# ERROR
+addSubstituteProgram(CH1, XXX, P11ALT1, nameALT1, descriptionALT1, 200)
+ERROR: Program not found
+
+addSubstituteProgram(CH1, P11, P11ALT1, nameALT1, descriptionALT1, 200)
+void
+addSubstituteProgram(CH1, P11, P11ALT2, nameALT2, descriptionALT2, 400)
+void
+addSubstituteProgram(CH1, P11, P11ALT3, nameALT3, descriptionALT3, 100)
+void
+addSubstituteProgram(CH1, P11, P11ALT4, nameALT4, descriptionALT4, 300)
+void
+addSubstituteProgram(CH1, P11, P11ALT5, nameALT5, descriptionALT5, 600)
+void
+
+substituteProgram(CH1, P11)
+void
+programs(CH1)
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
+P12, The Last Magician, description2 views(2) rating(0.0):
+P13, Newton's Third Law, description3 views(5) rating(5.0):
+
+substituteProgram(CH1, P11ALT5)
+void
+programs(CH1)
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
+P12, The Last Magician, description2 views(2) rating(0.0):
+P13, Newton's Third Law, description3 views(5) rating(5.0):
+
+substituteProgram(CH1, P11ALT2)
+void
+programs(CH1)
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
+P12, The Last Magician, description2 views(2) rating(0.0):
+P13, Newton's Third Law, description3 views(5) rating(5.0):
+
+substituteProgram(CH1, P11ALT4)
+void
+programs(CH1)
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
+P12, The Last Magician, description2 views(2) rating(0.0):
+P13, Newton's Third Law, description3 views(5) rating(5.0):
+
+substituteProgram(CH1, P11ALT1)
+void
+programs(CH1)
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
+P12, The Last Magician, description2 views(2) rating(0.0):
+P13, Newton's Third Law, description3 views(5) rating(5.0):
+
+substituteProgram(CH1, P11ALT3)
+void
+
+programs(CH1)
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
+P12, The Last Magician, description2 views(2) rating(0.0):
+P13, Newton's Third Law, description3 views(5) rating(5.0):
+
+getUserViews(U1)
+P11, Discovering the work of Isaac Newton, description1, views(4)
+P12, The Last Magician, description2, views(2)
+P13, Newton's Third Law, description3, views(5)
+P21, Fundamental ideas in chemistry, description1, views(2)
+P23, Chemistry for the Biosciences, description3, views(6)
+P22, The mole, description2, views(1)
+
+getTop10Programs()
+P23, Chemistry for the Biosciences, description3 views(6) rating(2.0):
+P13, Newton's Third Law, description3 views(5) rating(5.0):
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
+P12, The Last Magician, description2 views(2) rating(0.0):
+P21, Fundamental ideas in chemistry, description1 views(2) rating(4.0):
+P22, The mole, description2 views(1) rating(1.0):
+
+getChannelTop10Programs(CH1)
+P13, Newton's Third Law, description3 views(5) rating(5.0):
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
+P12, The Last Magician, description2 views(2) rating(0.0):
+
+getMessages(CH1, P11)
+U1 [title1] message1 
+U1 [title2] message2 
+U2 [title3] message3 
+U3 [title4] message4 
+U4 [title5] message5 

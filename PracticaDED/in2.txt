@@ -1,0 +1,233 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# FORMAT per a fer el test:                                         #
+# nomMetode, valorArgument1, valorArgument2, valorArgumentN         #
+# Admet String's, tipus de dades primitius i dates (java.util.Date) #
+# en format dd-MM-yyyy HH:mm:ss                                     #
+# No suporta metodes homonims amb el mateix nombre de parametres    #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# EP2 test
+
+# ERROR
+users
+
+addUser, U1, joep@uoc.edu, ****
+addUser, U2, joan@uoc.edu, ****
+addUser, U3, pere@uoc.edu, ****
+addUser, U4, achillar@uoc.edu, ****
+addUser, U5, sanchez@uoc.edu, ****
+addUser, U6, degana@uoc.edu, ****
+addUser, U7, alex@uoc.edu, ****
+addUser, U8, sergio@uoc.edu, ****
+
+addUser, B3, helenap@uoc.edu, ****
+addUser, A36, marti@uoc.edu, ****
+addUser, A16, pepmarti@uoc.edu, ****
+
+users
+
+# update
+addUser, U1, josep@uoc.edu, ****
+
+users
+
+# ERROR
+channels
+
+addChannel, CH1, Physics, description1	
+
+addChannel, CH2, Chemistry, description2	
+addChannel, CH3, Maths, description3
+addChannel, CH4, Arts, description4
+addChannel, CH5, Computer & Science, description5
+addChannel, CH6, Physics, description6
+
+channels
+
+# ERROR
+programs, CH1
+# ERROR
+programs, CH2
+# ERROR
+programs, CH3
+
+addProgram, P12, The Last Magician, description2, CH1  
+addProgram, P13, Newton's Third Law, description3, CH1  
+addProgram, P11, Discovering the work of Isaac Newton, description1, CH1  
+
+addProgram, P22, The mole, description2, CH2  
+addProgram, P23, Chemistry for the Biosciences, description3, CH2  
+addProgram, P21, Fundamental ideas in chemistry, description1, CH2
+
+addProgram, P32, Diego Velázquez: Las Meninas, description2, CH3
+addProgram, P33, Da Vinci: The Lost Treasure, description3, CH3
+addProgram, P31, Pablo Picasso paintings, description1, CH3
+
+#ERROR
+programs, CHX
+
+programs, CH1
+
+programs, CH2
+
+programs, CH3
+
+#ERROR
+programs, CH4
+
+
+#ERROR
+registerView, CHX, P11, U1,  26-10-2015 20:00:00
+
+#ERROR
+registerView, CH1, PX, U1,  26-10-2015 20:00:00
+
+#ERROR
+registerView, CH1, P11, UX,  26-10-2015 20:00:00
+
+registerView, CH1, P11, U1,  26-10-2015 20:00:00
+registerView, CH1, P12, U1,  27-10-2015 20:00:00
+registerView, CH1, P13, U1,  28-10-2015 20:00:00
+registerView, CH2, P21, U1,  29-10-2015 20:00:00
+registerView, CH2, P23, U1,  30-10-2015 20:00:00
+registerView, CH2, P22, U1,  04-11-2015 19:00:00
+
+registerView, CH1, P11, U2,  28-10-2015 20:00:00
+registerView, CH1, P12, U2,  29-10-2015 20:20:00
+registerView, CH1, P13, U2,  30-10-2015 21:00:00
+
+registerView, CH1, P13, U4,  28-10-2015 20:00:00
+registerView, CH1, P13, U5,  29-10-2015 20:20:00
+registerView, CH1, P13, U6,  30-10-2015 21:00:00
+
+registerView, CH2, P23, U4,  28-10-2015 20:00:00
+registerView, CH2, P23, U5,  29-10-2015 20:20:00
+registerView, CH2, P23, U6,  30-10-2015 21:00:00
+registerView, CH2, P23, U7,  30-10-2015 21:00:00
+registerView, CH2, P23, U8,  30-10-2015 21:00:00
+
+registerView, CH1, P11, U7,  30-10-2015 21:00:00
+registerView, CH1, P11, U8,  30-10-2015 21:00:00
+
+registerView, CH2, P21, U7,  30-10-2015 21:00:00
+
+getUserViews, U1
+
+getUserViews, U2
+
+rateProgram, CH1, P13, 5
+rateProgram, CH1, P13, 5
+rateProgram, CH1, P13, 5
+rateProgram, CH1, P13, 5
+program, CH1, P13
+
+rateProgram, CH1, P11, 5
+
+program, CH1, P11
+
+rateProgram, CH1, P11, 0
+program, CH1, P11
+
+rateProgram, CH1, P11, 1
+program, CH1, P11
+
+rateProgram, CH1, P11, 1
+program, CH1, P11
+
+rateProgram, CH1, P11, 2
+program, CH1, P11
+
+topRating
+
+rateProgram, CH2, P21, 4
+rateProgram, CH2, P22, 1
+rateProgram, CH2, P23, 2
+
+programs, CH1
+
+programs, CH2
+
+getTop10Programs
+
+getChannelTop10Programs, CH2
+
+#########
+## PRA ##
+#########
+
+
+# ERROR
+addMessage, XXX, P11, U1, title1, message1 
+
+# ERROR
+addMessage, CH1, XXX, U1, title1, message1 
+
+# ERROR
+addMessage, CH1, P11, XX, title1, message1 
+
+addMessage, CH1, P11, U1, title1, message1 
+
+# ERROR
+addMessage, CH1, P11, U1, title1, message2 
+
+getMessages, CH1, P11
+
+addMessage, CH1, P11, U1, title2, message2
+addMessage, CH1, P11, U1, titleX, messageX
+addMessage, CH1, P11, U2, title3, message3
+addMessage, CH1, P11, U3, title4, message4
+addMessage, CH1, P11, U4, title5, message5
+
+getMessages, CH1, P11
+
+# ERROR
+removeMessage, XX, P11, titleX
+
+# ERROR
+removeMessage, CH1, XX, titleX
+
+# ERROR
+removeMessage, CH1, P11, titleXXXXX
+
+removeMessage, CH1, P11, titleX
+
+getMessages, CH1, P11
+ 
+# ERROR
+addSubstituteProgram, XXX, P11, P11AlT1, nameALT1, descriptionALT1, 200
+ 
+# ERROR
+addSubstituteProgram, CH1, XXX, P11ALT1, nameALT1, descriptionALT1, 200
+ 
+addSubstituteProgram, CH1, P11, P11ALT1, nameALT1, descriptionALT1, 200
+addSubstituteProgram, CH1, P11, P11ALT2, nameALT2, descriptionALT2, 400
+addSubstituteProgram, CH1, P11, P11ALT3, nameALT3, descriptionALT3, 100
+addSubstituteProgram, CH1, P11, P11ALT4, nameALT4, descriptionALT4, 300
+addSubstituteProgram, CH1, P11, P11ALT5, nameALT5, descriptionALT5, 600
+
+substituteProgram, CH1, P11
+programs, CH1
+
+substituteProgram, CH1, P11ALT5
+ programs, CH1
+
+substituteProgram, CH1, P11ALT2
+programs, CH1
+
+substituteProgram, CH1, P11ALT4
+programs, CH1
+ 
+substituteProgram, CH1, P11ALT1
+programs, CH1
+
+substituteProgram, CH1, P11ALT3
+
+programs, CH1
+
+getUserViews, U1 
+ 
+getTop10Programs
+
+getChannelTop10Programs, CH1
+
+getMessages, CH1, P11
