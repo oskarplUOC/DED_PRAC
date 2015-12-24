@@ -48,6 +48,9 @@ public class Program implements Comparable<Program>{
 	private DiccionariAVLImpl<String, Message> mMessage;
 	
 	
+	private Boolean enabled;
+	
+	
 	private CuaAmbPrioritat<SubstituteProgram> substitutePrograms;
 	
 	
@@ -126,6 +129,14 @@ public class Program implements Comparable<Program>{
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
+	public Boolean getEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(Boolean enabled) {
+		this.enabled = enabled;
+	}
 
 	@Override
 	public int compareTo(Program o) {
@@ -152,27 +163,21 @@ public class Program implements Comparable<Program>{
 	public Iterador<Message> mMessage() {
 		
 		return this.mMessage.elements();
-		
-	}
-	
-	public void addSubstituteProgram(String idChannel, String idProgram, String idSubstituteProgram, String name, String description,int priority) throws EIException {
-		
-		SubstituteProgram substituteProgramToAdd = new SubstituteProgram(idChannel, idProgram, idSubstituteProgram, name, description, priority);
-		this.substitutePrograms.encuar(substituteProgramToAdd);
-	}
-
-	public SubstituteProgram getSubstituteProgram(String idSubstituteProgram) {
-		
-		/*return this.substitutePrograms.consultar(idSubstituteProgram);*/
-		return null;
 			
 	}
 	
-	public Iterador<SubstituteProgram> substitutePrograms() {
+	@SuppressWarnings("rawtypes")
+	public CuaAmbPrioritat getSubstitutePrograms() {
 		
-		return this.substitutePrograms.elements();
-	
+		return this.substitutePrograms;
+		
 	}
-
+	
+	public void addSubstituteProgram(String idSubstituteProgram, String name, String description,int priority) throws EIException {
+		
+		SubstituteProgram substituteProgramToAdd = new SubstituteProgram(idSubstituteProgram, name, description, priority);
+		this.substitutePrograms.encuar(substituteProgramToAdd);
+						
+	}
 	
 }

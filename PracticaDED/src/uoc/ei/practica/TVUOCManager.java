@@ -152,5 +152,6 @@ public interface TVUOCManager {
 	 * @post Si existeix el canal idChanel i el programa idProgram els programes del canal ja no tindran el programa idProgram i, en el seu lloc, tindran el programa dels substituts amb més prioritat. Si l'identificador del canal o el programa a substituir no existeixen retorna un error. Si no hi ha cap programa per fer la substitució també retorna un error.
 	 */
 	public void substituteProgram(String idChannel, String idProgram) throws EIException;
+
 	
 }
