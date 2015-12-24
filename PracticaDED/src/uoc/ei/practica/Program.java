@@ -5,6 +5,8 @@ import java.util.Comparator;
 import uoc.ei.tads.CuaAmbPrioritat;
 import uoc.ei.tads.DiccionariAVLImpl;
 import uoc.ei.tads.Iterador;
+import uoc.ei.tads.Llista;
+import uoc.ei.tads.LlistaEncadenada;
 
 /**
  * mètode que modela un programa en el sistema
@@ -179,5 +181,26 @@ public class Program implements Comparable<Program>{
 		this.substitutePrograms.encuar(substituteProgramToAdd);
 						
 	}
+	
+	public void substituteProgram(String idChannel, String idProgram) {
+		
+		Llista<SubstituteProgram> llistaAux = new LlistaEncadenada<SubstituteProgram>();
+		
+		boolean trobat = false;
+		
+		while(!substitutePrograms.estaBuit() && !trobat) {
+			
+			SubstituteProgram substituteProgramToDel = substitutePrograms.desencuar();
+			if (substituteProgramToDel.getId() == idProgram) trobat = true;
+			else llistaAux.afegirAlFinal(substituteProgramToDel);
+		}
+		
+		Iterador <SubstituteProgram> prog = llistaAux.elements();
+		
+		while (prog.hiHaSeguent());
+			
+			substitutePrograms.encuar(prog.seguent());
+		
+		}
 	
 }

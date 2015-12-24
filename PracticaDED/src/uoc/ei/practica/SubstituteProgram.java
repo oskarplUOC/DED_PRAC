@@ -5,8 +5,7 @@ import java.util.Comparator;
 
 public class SubstituteProgram extends Program {
 	
-	@SuppressWarnings("rawtypes")
-	public static final Comparator SUBSTITUTEPROGRAM_BY_PRIORITY_COMPARATOR = new Comparator<SubstituteProgram>(){
+	public static final Comparator<SubstituteProgram> SUBSTITUTEPROGRAM_BY_PRIORITY_COMPARATOR = new Comparator<SubstituteProgram>(){
 		
 		@Override
 		public int compare(SubstituteProgram substituteProgram1, SubstituteProgram substituteProgram0) {
@@ -39,7 +38,6 @@ public class SubstituteProgram extends Program {
 	public String toString() {
 		
 		StringBuffer sb = new StringBuffer();
-			
 		sb.append(this.getId()).append(", ").append(this.getName()).append(", ");
 		sb.append(this.getDescription()).append(" ").append("views(" + this.getViews() +") ").append("rating(" + this.rating() + ") ").append("priority: " + priority);
 		
