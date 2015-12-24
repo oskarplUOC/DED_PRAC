@@ -219,8 +219,8 @@ public class TVUOCManagerImpl implements TVUOCManager {
 		
 		p.removeMessage(idChannel, idProgram, title);
 		
-   }
-
+	}
+       
 	@Override
 	public void addSubstituteProgram(String idChannel, String idProgram, String idSubstituteProgram, String name, String description,int priority) throws EIException {
 		
@@ -230,7 +230,9 @@ public class TVUOCManagerImpl implements TVUOCManager {
 		Program p = channel.getProgram(idProgram);
 		if (p == null) throw new EIException(Messages.PROGRAM_NOT_FOUND);
 		
-		p.addSubstituteProgram(idSubstituteProgram, name, description, priority);
+		SubstituteProgram psubstitute = new SubstituteProgram(idSubstituteProgram, name, description, priority);
+		
+		p.addSubstituteProgram(psubstitute);
 	}
 	
 	

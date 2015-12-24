@@ -72,7 +72,6 @@ public class Program implements Comparable<Program>{
 		}
 	};
 
-	@SuppressWarnings("unchecked")
 	public Program(String id, String name, String description) {
 		
 		this.id=id;
@@ -175,16 +174,15 @@ public class Program implements Comparable<Program>{
 		
 	}
 	
-	public void addSubstituteProgram(String idSubstituteProgram, String name, String description,int priority) throws EIException {
+	public void addSubstituteProgram(SubstituteProgram p) throws EIException {
 		
-		SubstituteProgram substituteProgramToAdd = new SubstituteProgram(idSubstituteProgram, name, description, priority);
-		this.substitutePrograms.encuar(substituteProgramToAdd);
-						
+		this.substitutePrograms.encuar(p);
+			
 	}
 	
 	public void substituteProgram(String idChannel, String idProgram) {
 		
-		Llista<SubstituteProgram> llistaAux = new LlistaEncadenada<SubstituteProgram>();
+		/*Llista<SubstituteProgram> llistaAux = new LlistaEncadenada<SubstituteProgram>();
 		
 		boolean trobat = false;
 		
@@ -199,7 +197,7 @@ public class Program implements Comparable<Program>{
 		
 		while (prog.hiHaSeguent());
 			
-			substitutePrograms.encuar(prog.seguent());
+			substitutePrograms.encuar(prog.seguent()); */
 		
 		}
 	
