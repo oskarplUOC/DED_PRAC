@@ -6,15 +6,15 @@ import java.util.Comparator;
 public class SubstituteProgram extends Program {
 	
 	@SuppressWarnings("rawtypes")
-	public static final Comparator SUBSTITUTEPROGRAM_BY_PRIORITY_COMPARATOR = new Comparator<SubstituteProgram>(){
-		
-		@Override
-		public int compare(SubstituteProgram substituteProgram1, SubstituteProgram substituteProgram0) {
-			
-			return (int)(substituteProgram1.getPriority()-substituteProgram0.getPriority());
-		}
-		
-	};
+	   public static final Comparator SUBSTITUTEPROGRAM_BY_PRIORITY_COMPARATOR = new Comparator<SubstituteProgram>(){
+
+	      @Override
+	      public int compare(SubstituteProgram substituteProgram1, SubstituteProgram substituteProgram0) {
+
+	         return (int)(substituteProgram0.getPriority()-substituteProgram1.getPriority());
+	      }
+
+	   };
 	
 	private int priority;
 	

@@ -150,19 +150,19 @@ programs(CHX)
 ERROR: Channel not found
 
 programs(CH1)
-P11, Discovering the work of Isaac Newton, description1 views(0) rating(0.0):
-P12, The Last Magician, description2 views(0) rating(0.0):
-P13, Newton's Third Law, description3 views(0) rating(0.0):
+P11, Discovering the work of Isaac Newton, description1 views(0) rating(0.0):, enabled: null
+P12, The Last Magician, description2 views(0) rating(0.0):, enabled: null
+P13, Newton's Third Law, description3 views(0) rating(0.0):, enabled: null
 
 programs(CH2)
-P21, Fundamental ideas in chemistry, description1 views(0) rating(0.0):
-P22, The mole, description2 views(0) rating(0.0):
-P23, Chemistry for the Biosciences, description3 views(0) rating(0.0):
+P21, Fundamental ideas in chemistry, description1 views(0) rating(0.0):, enabled: null
+P22, The mole, description2 views(0) rating(0.0):, enabled: null
+P23, Chemistry for the Biosciences, description3 views(0) rating(0.0):, enabled: null
 
 programs(CH3)
-P31, Pablo Picasso paintings, description1 views(0) rating(0.0):
-P32, Diego Velázquez: Las Meninas, description2 views(0) rating(0.0):
-P33, Da Vinci: The Lost Treasure, description3 views(0) rating(0.0):
+P31, Pablo Picasso paintings, description1 views(0) rating(0.0):, enabled: null
+P32, Diego Velázquez: Las Meninas, description2 views(0) rating(0.0):, enabled: null
+P33, Da Vinci: The Lost Treasure, description3 views(0) rating(0.0):, enabled: null
 
 #ERROR
 programs(CH4)
@@ -249,36 +249,36 @@ void
 rateProgram(CH1, P13, 5)
 void
 program(CH1, P13)
-P13, Newton's Third Law, description3 views(5) rating(5.0):
+P13, Newton's Third Law, description3 views(5) rating(5.0):, enabled: null
 
 rateProgram(CH1, P11, 5)
 void
 
 program(CH1, P11)
-P11, Discovering the work of Isaac Newton, description1 views(4) rating(5.0):
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(5.0):, enabled: null
 
 rateProgram(CH1, P11, 0)
 void
 program(CH1, P11)
-P11, Discovering the work of Isaac Newton, description1 views(4) rating(2.5):
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(2.5):, enabled: null
 
 rateProgram(CH1, P11, 1)
 void
 program(CH1, P11)
-P11, Discovering the work of Isaac Newton, description1 views(4) rating(2.0):
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(2.0):, enabled: null
 
 rateProgram(CH1, P11, 1)
 void
 program(CH1, P11)
-P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.75):
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.75):, enabled: null
 
 rateProgram(CH1, P11, 2)
 void
 program(CH1, P11)
-P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):, enabled: null
 
 topRating()
-P13, Newton's Third Law, description3 views(5) rating(5.0):
+P13, Newton's Third Law, description3 views(5) rating(5.0):, enabled: null
 
 rateProgram(CH2, P21, 4)
 void
@@ -288,27 +288,27 @@ rateProgram(CH2, P23, 2)
 void
 
 programs(CH1)
-P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
-P12, The Last Magician, description2 views(2) rating(0.0):
-P13, Newton's Third Law, description3 views(5) rating(5.0):
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):, enabled: null
+P12, The Last Magician, description2 views(2) rating(0.0):, enabled: null
+P13, Newton's Third Law, description3 views(5) rating(5.0):, enabled: null
 
 programs(CH2)
-P21, Fundamental ideas in chemistry, description1 views(2) rating(4.0):
-P22, The mole, description2 views(1) rating(1.0):
-P23, Chemistry for the Biosciences, description3 views(6) rating(2.0):
+P21, Fundamental ideas in chemistry, description1 views(2) rating(4.0):, enabled: null
+P22, The mole, description2 views(1) rating(1.0):, enabled: null
+P23, Chemistry for the Biosciences, description3 views(6) rating(2.0):, enabled: null
 
 getTop10Programs()
-P23, Chemistry for the Biosciences, description3 views(6) rating(2.0):
-P13, Newton's Third Law, description3 views(5) rating(5.0):
-P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
-P12, The Last Magician, description2 views(2) rating(0.0):
-P21, Fundamental ideas in chemistry, description1 views(2) rating(4.0):
-P22, The mole, description2 views(1) rating(1.0):
+P23, Chemistry for the Biosciences, description3 views(6) rating(2.0):, enabled: null
+P13, Newton's Third Law, description3 views(5) rating(5.0):, enabled: null
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):, enabled: null
+P12, The Last Magician, description2 views(2) rating(0.0):, enabled: null
+P21, Fundamental ideas in chemistry, description1 views(2) rating(4.0):, enabled: null
+P22, The mole, description2 views(1) rating(1.0):, enabled: null
 
 getChannelTop10Programs(CH2)
-P23, Chemistry for the Biosciences, description3 views(6) rating(2.0):
-P21, Fundamental ideas in chemistry, description1 views(2) rating(4.0):
-P22, The mole, description2 views(1) rating(1.0):
+P23, Chemistry for the Biosciences, description3 views(6) rating(2.0):, enabled: null
+P21, Fundamental ideas in chemistry, description1 views(2) rating(4.0):, enabled: null
+P22, The mole, description2 views(1) rating(1.0):, enabled: null
 
 #########
 ## PRA ##
@@ -400,70 +400,51 @@ void
 substituteProgram(CH1, P11)
 void
 programs(CH1)
-P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
-P12, The Last Magician, description2 views(2) rating(0.0):
-P13, Newton's Third Law, description3 views(5) rating(5.0):
+P11ALT5, nameALT5, descriptionALT5, views(0), rating(0.0), 600
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):, enabled: true
+P12, The Last Magician, description2 views(2) rating(0.0):, enabled: null
+P13, Newton's Third Law, description3 views(5) rating(5.0):, enabled: null
 
 substituteProgram(CH1, P11ALT5)
 void
 programs(CH1)
-P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
-P12, The Last Magician, description2 views(2) rating(0.0):
-P13, Newton's Third Law, description3 views(5) rating(5.0):
+P11ALT2, nameALT2, descriptionALT2, views(0), rating(0.0), 400
+P11ALT5, nameALT5, descriptionALT5, views(0), rating(0.0), 600
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):, enabled: true
+P12, The Last Magician, description2 views(2) rating(0.0):, enabled: null
+P13, Newton's Third Law, description3 views(5) rating(5.0):, enabled: null
 
 substituteProgram(CH1, P11ALT2)
 void
 programs(CH1)
-P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
-P12, The Last Magician, description2 views(2) rating(0.0):
-P13, Newton's Third Law, description3 views(5) rating(5.0):
+P11ALT2, nameALT2, descriptionALT2, views(0), rating(0.0), 400
+P11ALT4, nameALT4, descriptionALT4, views(0), rating(0.0), 300
+P11ALT5, nameALT5, descriptionALT5, views(0), rating(0.0), 600
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):, enabled: true
+P12, The Last Magician, description2 views(2) rating(0.0):, enabled: null
+P13, Newton's Third Law, description3 views(5) rating(5.0):, enabled: null
 
 substituteProgram(CH1, P11ALT4)
 void
 programs(CH1)
-P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
-P12, The Last Magician, description2 views(2) rating(0.0):
-P13, Newton's Third Law, description3 views(5) rating(5.0):
+P11ALT1, nameALT1, descriptionALT1, views(0), rating(0.0), 200
+P11ALT2, nameALT2, descriptionALT2, views(0), rating(0.0), 400
+P11ALT4, nameALT4, descriptionALT4, views(0), rating(0.0), 300
+P11ALT5, nameALT5, descriptionALT5, views(0), rating(0.0), 600
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):, enabled: true
+P12, The Last Magician, description2 views(2) rating(0.0):, enabled: null
+P13, Newton's Third Law, description3 views(5) rating(5.0):, enabled: null
 
 substituteProgram(CH1, P11ALT1)
 void
 programs(CH1)
-P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
-P12, The Last Magician, description2 views(2) rating(0.0):
-P13, Newton's Third Law, description3 views(5) rating(5.0):
+P11ALT1, nameALT1, descriptionALT1, views(0), rating(0.0), 200
+P11ALT2, nameALT2, descriptionALT2, views(0), rating(0.0), 400
+P11ALT3, nameALT3, descriptionALT3, views(0), rating(0.0), 100
+P11ALT4, nameALT4, descriptionALT4, views(0), rating(0.0), 300
+P11ALT5, nameALT5, descriptionALT5, views(0), rating(0.0), 600
+P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):, enabled: true
+P12, The Last Magician, description2 views(2) rating(0.0):, enabled: null
+P13, Newton's Third Law, description3 views(5) rating(5.0):, enabled: null
 
 substituteProgram(CH1, P11ALT3)
-void
-
-programs(CH1)
-P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
-P12, The Last Magician, description2 views(2) rating(0.0):
-P13, Newton's Third Law, description3 views(5) rating(5.0):
-
-getUserViews(U1)
-P11, Discovering the work of Isaac Newton, description1, views(4)
-P12, The Last Magician, description2, views(2)
-P13, Newton's Third Law, description3, views(5)
-P21, Fundamental ideas in chemistry, description1, views(2)
-P23, Chemistry for the Biosciences, description3, views(6)
-P22, The mole, description2, views(1)
-
-getTop10Programs()
-P23, Chemistry for the Biosciences, description3 views(6) rating(2.0):
-P13, Newton's Third Law, description3 views(5) rating(5.0):
-P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
-P12, The Last Magician, description2 views(2) rating(0.0):
-P21, Fundamental ideas in chemistry, description1 views(2) rating(4.0):
-P22, The mole, description2 views(1) rating(1.0):
-
-getChannelTop10Programs(CH1)
-P13, Newton's Third Law, description3 views(5) rating(5.0):
-P11, Discovering the work of Isaac Newton, description1 views(4) rating(1.8):
-P12, The Last Magician, description2 views(2) rating(0.0):
-
-getMessages(CH1, P11)
-U1 [title1] message1 
-U1 [title2] message2 
-U2 [title3] message3 
-U3 [title4] message4 
-U4 [title5] message5 

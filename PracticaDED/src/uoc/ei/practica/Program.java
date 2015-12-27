@@ -5,8 +5,7 @@ import java.util.Comparator;
 import uoc.ei.tads.CuaAmbPrioritat;
 import uoc.ei.tads.DiccionariAVLImpl;
 import uoc.ei.tads.Iterador;
-import uoc.ei.tads.Llista;
-import uoc.ei.tads.LlistaEncadenada;
+
 
 /**
  * mètode que modela un programa en el sistema
@@ -72,6 +71,7 @@ public class Program implements Comparable<Program>{
 		}
 	};
 
+	@SuppressWarnings("unchecked")
 	public Program(String id, String name, String description) {
 		
 		this.id=id;
@@ -99,7 +99,7 @@ public class Program implements Comparable<Program>{
 	
 	@Override
 	public String toString() {
-		StringBuffer sb = new StringBuffer( id + ", " + name + ", " + description+" views("+this.views+") rating("+this.rating()+"):");
+		StringBuffer sb = new StringBuffer( id + ", " + name + ", " + description+" views("+this.views+") rating("+this.rating()+"):" + ", enabled: " + enabled);
 		return sb.toString();
 	}
 
@@ -167,38 +167,39 @@ public class Program implements Comparable<Program>{
 			
 	}
 	
-	@SuppressWarnings("rawtypes")
-	public CuaAmbPrioritat getSubstitutePrograms() {
-		
-		return this.substitutePrograms;
-		
-	}
-	
 	public void addSubstituteProgram(SubstituteProgram p) throws EIException {
 		
 		this.substitutePrograms.encuar(p);
 			
 	}
 	
-	public void substituteProgram(String idChannel, String idProgram) {
+	@SuppressWarnings("rawtypes")
+	public CuaAmbPrioritat getSubstitutePrograms() throws EIException {
 		
-		/*Llista<SubstituteProgram> llistaAux = new LlistaEncadenada<SubstituteProgram>();
+		return substitutePrograms;
 		
-		boolean trobat = false;
-		
-		while(!substitutePrograms.estaBuit() && !trobat) {
-			
-			SubstituteProgram substituteProgramToDel = substitutePrograms.desencuar();
-			if (substituteProgramToDel.getId() == idProgram) trobat = true;
-			else llistaAux.afegirAlFinal(substituteProgramToDel);
-		}
-		
-		Iterador <SubstituteProgram> prog = llistaAux.elements();
-		
-		while (prog.hiHaSeguent());
-			
-			substitutePrograms.encuar(prog.seguent()); */
-		
-		}
+	}
 	
+	@SuppressWarnings("rawtypes")
+	public CuaAmbPrioritat getCuaAmbPrioritat(){
+		
+		return this.substitutePrograms;
+	}
+			
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public void setCua(CuaAmbPrioritat c){
+		
+		this.substitutePrograms = c;
+	}
+	
+	public boolean cuaBuida(){
+		 
+		return this.substitutePrograms.estaBuit();
+	}
+
+	public Program desencuarCua(){
+	
+		return this.substitutePrograms.desencuar();
+	}
+
 }

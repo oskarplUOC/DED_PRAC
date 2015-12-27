@@ -27,12 +27,13 @@ public class Channel extends IdentifiedObject {
 	/**
 	 * diccionari de programes
 	 */
-	private Diccionari<String, Program> programs;
+	private TaulaDispersio<String, Program> programs;
 	
 	/**
 	 * vector dels 10 millors programes d'un canal (amb més visualitzacions)
 	 */
 	private OrderedVector<Program> top10;
+
 	
 	public Channel(String idChannel, String name, String description) {
 		
@@ -71,15 +72,15 @@ public class Channel extends IdentifiedObject {
 		return this.idChannel.equals(idChannel);
 	}
 
-	public void addProgram(String id, String name, String description) {
+	public void addProgram(Program p) {
 		
-		this.programs.afegir(id, new Program(id, name, description));
-		
+		this.programs.afegir(p.getId(), p);
+			
 	}
 
-	public Program getProgram(String idProgram) {
+	public Program getProgram(String id) {
 		
-		return this.programs.consultar(idProgram);
+		return this.programs.consultar(id);
 			
 	}
 	
@@ -102,7 +103,7 @@ public class Channel extends IdentifiedObject {
 	public Iterador<Program> top10() {
 		return this.top10.elements();
 	}
-	
+		
 	/**
 	 * mètode que proporciona una representació en forma de cadena de caracters d'un canal
 	 */

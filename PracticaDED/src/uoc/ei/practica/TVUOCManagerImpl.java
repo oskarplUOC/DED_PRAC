@@ -61,7 +61,8 @@ public class TVUOCManagerImpl implements TVUOCManager {
 	public void addProgram(String id, String name, String description, String idChannel) throws EIException {
 		
 		Channel channel = this.channels.getIdentifiedObject(idChannel);
-		channel.addProgram(id, name, description);
+		Program p = new Program (id, name, description);
+		channel.addProgram(p);
 	}
 
 
@@ -231,15 +232,29 @@ public class TVUOCManagerImpl implements TVUOCManager {
 		if (p == null) throw new EIException(Messages.PROGRAM_NOT_FOUND);
 		
 		SubstituteProgram psubstitute = new SubstituteProgram(idSubstituteProgram, name, description, priority);
-		
 		p.addSubstituteProgram(psubstitute);
+		
 	}
-	
 	
 	@Override
 	public void substituteProgram(String idChannel, String idProgram) throws EIException {
 		
+		Channel channel = this.channels.getIdentifiedObject(idChannel);
+		if (channel == null) throw new EIException(Messages.CHANNEL_NOT_FOUND);
 		
+		Program program = channel.getProgram(idProgram);
+		Program sub = null;		
+		
+		sub = program.desencuarCua();
+		
+		sub.setCua(program.getCuaAmbPrioritat()); 
+		
+		channel.addProgram(sub);
+		
+		program.setEnabled(true); 
+
+		sub.setEnabled(false);
+
 	}
 
 }
