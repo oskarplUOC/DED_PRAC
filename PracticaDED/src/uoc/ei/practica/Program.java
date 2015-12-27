@@ -99,8 +99,21 @@ public class Program implements Comparable<Program>{
 	
 	@Override
 	public String toString() {
-		StringBuffer sb = new StringBuffer( id + ", " + name + ", " + description+" views("+this.views+") rating("+this.rating()+"):" + ", enabled: " + enabled);
+		
+		StringBuffer sb = new StringBuffer();
+		
+		if (enabled == null) {
+			
+			sb.append(id + ", " + name + ", " + description+" views("+this.views+") rating("+this.rating()+"):");
+		}
+		
+		else {
+			
+			sb.append( id + ", " + name + ", " + description+" views("+this.views+") rating("+this.rating()+"):" + ", enabled: " + enabled);
+		}
+		
 		return sb.toString();
+		
 	}
 
 	public int getViews() {

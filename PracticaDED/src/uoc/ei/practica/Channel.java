@@ -1,6 +1,5 @@
 package uoc.ei.practica;
 
-import uoc.ei.tads.Diccionari;
 import uoc.ei.tads.Iterador;
 import uoc.ei.tads.TaulaDispersio;
 

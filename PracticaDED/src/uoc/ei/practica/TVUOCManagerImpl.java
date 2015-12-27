@@ -243,7 +243,9 @@ public class TVUOCManagerImpl implements TVUOCManager {
 		if (channel == null) throw new EIException(Messages.CHANNEL_NOT_FOUND);
 		
 		Program program = channel.getProgram(idProgram);
-		Program sub = null;		
+		Program sub = null;
+		
+		if (program.cuaBuida()== true) throw new EIException(Messages.NO_PROGRAM_SUBSTITUTE);
 		
 		sub = program.desencuarCua();
 		
@@ -251,9 +253,9 @@ public class TVUOCManagerImpl implements TVUOCManager {
 		
 		channel.addProgram(sub);
 		
-		program.setEnabled(true); 
+		program.setEnabled(false); 
 
-		sub.setEnabled(false);
+		sub.setEnabled(true);
 
 	}
 
