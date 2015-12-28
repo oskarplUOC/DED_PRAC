@@ -102,14 +102,15 @@ public class Program implements Comparable<Program>{
 		
 		StringBuffer sb = new StringBuffer();
 		
-		if (enabled == null) {
+		if (enabled != null) {
 			
-			sb.append(id + ", " + name + ", " + description+" views("+this.views+") rating("+this.rating()+"):");
+			sb.append( id + ", " + name + ", " + description+", views("+this.views+"), rating("+this.rating()+")," + " enabled: " + enabled);
 		}
 		
-		else {
+		else if (enabled == null) {
 			
-			sb.append( id + ", " + name + ", " + description+" views("+this.views+") rating("+this.rating()+"):" + ", enabled: " + enabled);
+			sb.append(id + ", " + name + ", " + description + ", views("+this.views+"), rating("+this.rating()+")");
+			
 		}
 		
 		return sb.toString();

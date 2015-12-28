@@ -13,8 +13,21 @@ public class View {
 	
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
-		sb.append(p.getId()+", "+p.getName()+", "+p.getDescription()+", views("+p.getViews()+")");
 		
+		if (p.getEnabled() != null) {
+		
+			sb.append(p.getId()+", "+p.getName()+", "+p.getDescription()+", views("+p.getViews()+"), enabled: " + p.getEnabled());
+		}
+		
+		else {
+			
+			if (p.getEnabled() == null) {
+				
+				sb.append(p.getId()+", "+p.getName()+", "+p.getDescription()+", views("+p.getViews()+")");
+				
+			}
+				
+		}
 		return sb.toString();
 	}
 }

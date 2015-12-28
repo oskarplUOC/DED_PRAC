@@ -38,8 +38,20 @@ public class SubstituteProgram extends Program {
 	@Override
 	public String toString() {
 		
-		StringBuffer sb = new StringBuffer(this.getId() + ", " + this.getName()+ ", " + this.getDescription() + ", " + "views(" + this.getViews() + "), " + "rating(" + this.rating() + "), " + priority);
+		StringBuffer sb = new StringBuffer();
+		
+		if (this.getEnabled() == false) {
+			
+			sb.append(this.getId() + ", " + this.getName() + ", " + this.getDescription() + ", " + "views("+this.getViews()+"), rating("+this.rating()+")" + ", priority: " + this.priority +", enabled: " + this.getEnabled());
+		}
+		
+		else if (this.getEnabled() == true) {
+			
+			sb.append(this.getId() + ", " + this.getName() + ", " + this.getDescription()+", views("+this.getViews()+"), rating("+this.rating()+")" + ", priority: " + this.priority);
+			
+		}
+		
 		return sb.toString();
+		
 	}
-
 }
